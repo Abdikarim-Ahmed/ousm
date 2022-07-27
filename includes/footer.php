@@ -5,6 +5,6 @@
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-	<footer>Copyrights &copy; 2019, ousm.com. Allrights reserved. </footer>
+	<footer>Copyrights &copy; 2022, ousm.com. Allrights reserved. </footer>
 </body>
 </html>

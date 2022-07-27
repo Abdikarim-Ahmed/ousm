@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 27, 2019 at 03:04 PM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.6
+-- Generation Time: Jul 27, 2022 at 08:01 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -37,14 +36,6 @@ CREATE TABLE `cat` (
   `date_uploaded` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `cat`
---
-
-INSERT INTO `cat` (`id`, `title`, `filename`, `description`, `uploader_id`, `date_uploaded`) VALUES
-(1, 'Cashier', 'Autobiographical Statement.docx', 'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo', 2, '2019-11-26 23:09:57'),
-(2, 'Cashier', 'Autobiographical Statement.docx', 'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo', 2, '2019-11-26 23:10:39');
-
 -- --------------------------------------------------------
 
 --
@@ -60,15 +51,6 @@ CREATE TABLE `exam` (
   `date_uploaded` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `exam`
---
-
-INSERT INTO `exam` (`id`, `title`, `filename`, `description`, `uploader_id`, `date_uploaded`) VALUES
-(1, 'Data science', 'aden hussein haret - CV.docx', 'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo', 2, '2019-11-26 23:12:12'),
-(2, 'heading-title', 'Autobiographical Statement.docx', 'tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo', 2, '2019-11-26 23:12:30'),
-(3, 'Principles of Management', 'professional background.docx', 'Past exam of Principles of Management', 3, '2019-11-27 13:37:52');
-
 -- --------------------------------------------------------
 
 --
@@ -83,14 +65,6 @@ CREATE TABLE `note` (
   `uploader_id` int(11) NOT NULL,
   `date_uploaded` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `note`
---
-
-INSERT INTO `note` (`id`, `title`, `filename`, `description`, `uploader_id`, `date_uploaded`) VALUES
-(1, 'Cyber security expertise shortage in Kenya', 'An instance when you made a mistake or encountered a setback that helped you grow as a leader. What did you do and how are you applying those lessons learned in your current work.docx', 'Cyber security expertise shortage in Kenya', 2, '2019-11-26 22:30:48'),
-(2, 'Management Information System', 'MOBILE APP DVELOPMENT.docx', 'MIS notes, latest.', 2, '2019-11-27 13:33:50');
 
 -- --------------------------------------------------------
 
@@ -108,14 +82,6 @@ CREATE TABLE `user` (
   `uni` varchar(100) NOT NULL,
   `photo` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `user`
---
-
-INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`, `type`, `uni`, `photo`) VALUES
-(2, 'Mohamed', 'Ibrahim', 'moha@gmail.com', 'MTIz', 'Student', 'mku', '1574802963.png'),
-(3, 'Faysal', 'Bundid', 'fei@gmail.com', 'MTIz', 'Student', 'University of Nairobi', 'mansiizga-2.png');
 
 --
 -- Indexes for dumped tables
